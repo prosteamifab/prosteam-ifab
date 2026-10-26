@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ProSteam IFAB - Industrial Fabrication. Industrial fabrication, boiler-related work, ducting, piping, steel structures and custom metal fabrication.">
+  <meta name="theme-color" content="#09253b">
+  <title>ProSteam IFAB | Industrial Fabrication</title>
+  <style>
+    :root{--navy:#09253b;--blue:#123d5a;--gold:#ffbd25;--ink:#142d42;--muted:#607284;--pale:#f2f6f9;--white:#fff}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+    .top{background:var(--navy);color:#fff;font-size:13px;padding:8px 0}.top .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    header{background:#fff;position:sticky;top:0;z-index:10;box-shadow:0 2px 12px #001a2b13}.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;line-height:1.05}.logo{font-size:35px;letter-spacing:-2px;color:var(--navy);border-right:2px solid var(--gold);padding-right:12px}.brand small{display:block;font-size:15px;letter-spacing:.3px}
+    nav{display:flex;align-items:center;gap:22px;font-size:14px;font-weight:700}nav a:hover{color:#bd8300}
+    .btn{display:inline-block;background:var(--gold);color:#152c3e;padding:12px 18px;border-radius:7px;font-weight:800;border:0;cursor:pointer}.btn.dark{background:var(--navy);color:#fff}.hero{background:linear-gradient(90deg,#071f35f2 0%,#071f35d9 40%,#071f3520 100%),url('assets/prosteam-industrial-plant-banner.jpg') center 45%/cover no-repeat;color:#fff}
+    .hero .wrap{padding:82px 0 86px;min-height:390px;display:flex;align-items:center}.hero-copy{max-width:590px}.eyebrow{text-transform:uppercase;font-size:12px;letter-spacing:2px;font-weight:800;color:var(--gold)}h1{font-size:clamp(34px,5vw,56px);line-height:1.08;margin:12px 0}h1 span{color:var(--gold)}.hero p{max-width:550px;color:#edf3f7}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}.outline{border:1px solid #fff;color:#fff;padding:11px 18px;border-radius:7px;font-weight:700}
+    section{padding:58px 0}.section-head{text-align:center;margin-bottom:28px}.section-head .eyebrow{color:#bc8300}.section-head h2{font-size:32px;margin:4px 0}.section-head p{color:var(--muted);margin:0}
+    .services{background:var(--pale)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:#fff;padding:24px;border:1px solid #e0e8ee;border-radius:10px;box-shadow:0 6px 18px #0c2c4210}.ico{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--navy);color:#fff;font-size:22px;margin-bottom:12px}.card h3{margin:0 0 7px;font-size:18px}.card p{color:var(--muted);font-size:14px;margin:0}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}.about-visual{border-radius:12px;min-height:300px;background:linear-gradient(135deg,#0c2c42,#315a73);color:#fff;padding:32px;display:flex;flex-direction:column;justify-content:end;position:relative;overflow:hidden}.about-visual:before{content:"IFAB";font-weight:900;font-size:100px;opacity:.14;position:absolute;right:12px;top:10px}.about-visual h3{font-size:28px;max-width:330px;line-height:1.2;position:relative}.about-visual p{position:relative;color:#e3edf3}.about-copy h2{font-size:32px;line-height:1.2;margin:8px 0 14px}.about-copy p{color:var(--muted)}.checks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px;font-weight:700;font-size:14px}.checks span:before{content:"✓";color:#bd8300;font-weight:900;margin-right:8px}
+    .projects{background:var(--pale)}.project{padding:0;overflow:hidden}.project .project-img{height:150px;background:linear-gradient(135deg,#183c54,#6c8798);display:grid;place-items:center;color:#fff;font-size:40px}.project h3{padding:0 16px;margin:14px 0 4px;font-size:17px}.project p{padding:0 16px 16px}
+    .contact{background:var(--navy);color:#fff}.contact-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center}.contact p{color:#d5e0e8}.contact .eyebrow{color:var(--gold)}.contact h2{font-size:34px;line-height:1.2;margin:8px 0}.contact-box{background:#fff;color:var(--ink);padding:24px;border-radius:12px}.contact-box p{color:var(--ink);margin:8px 0}
+    footer{background:#061b2b;color:#d8e2e9;padding:22px 0;font-size:13px}.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+    .photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .photo-card{padding:12px;overflow:hidden}
+    .photo-card img{display:block;width:100%;height:auto;max-height:560px;object-fit:contain;border-radius:8px;background:#061b2b}
+    .photo-card h3{margin:12px 4px 4px}
+    @media(max-width:650px){.photo-grid{grid-template-columns:1fr}}
+\n    @media(max-width:800px){nav{display:none}.grid{grid-template-columns:repeat(2,1fr)}.about-grid,.contact-grid{grid-template-columns:1fr}.hero .wrap{padding:60px 0;min-height:350px}.about-visual{min-height:240px}}
+    @media(max-width:520px){.grid{grid-template-columns:1fr}.top .wrap{font-size:12px}.logo{font-size:29px}.brand small{font-size:12px}.hero{background-position:58% center}.hero .wrap{min-height:420px}.section-head h2,.about-copy h2{font-size:28px}.checks{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="top"><div class="wrap"><span>☎ <a href="tel:+919728524560">97285 24560</a> · <a href="tel:+917091991353">70919 91353</a></span><span>Industrial Fabrication • India</span><span>Quality • Safety • Reliability</span></div></div>
+  <header><div class="wrap nav">
+    <a class="brand" href="#home" aria-label="IFAB Home"><span class="logo">PS-IFAB</span><span><small>INDUSTRIAL</small><small>FABRICATION</small></span></a>
+    <nav><a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></nav>
+    <a class="btn" href="https://wa.me/919728524560?text=Hello%20IFAB%2C%20I%20would%20like%20a%20quotation." target="_blank" rel="noopener">WhatsApp / Get a Quote</a>
+  </div></header>
+  <main>
+    <section class="hero" id="home"><div class="wrap"><div class="hero-copy">
+      <div class="eyebrow">Strong structures. Lasting solutions.</div>
+      <h1>ProSteam <span>IFAB</span><br>Industrial Fabrication</h1>
+      <p>Industrial fabrication and custom metalwork for industrial requirements. Explore our services in fabrication, boiler-related work, ducting, piping and steel structures.</p>
+      <div class="actions"><a class="btn" href="#services">Our Services →</a><a class="outline" href="#contact">Contact Us</a></div>
+    </div></div></section>
+    <section class="services" id="services"><div class="wrap"><div class="section-head"><div class="eyebrow">Our Services</div><h2>What We Do</h2><p>Practical industrial solutions tailored to project requirements.</p></div>
+      <div class="grid">
+        <article class="card"><div class="ico">⚙</div><h3>Industrial Fabrication</h3><p>Custom fabrication of metal components, frames, platforms and industrial structures.</p></article>
+        <article class="card"><div class="ico">♨</div><h3>Boiler-Related Work</h3><p>Support for boiler installation, associated fabrication and maintenance requirements.</p></article>
+        <article class="card"><div class="ico">⇄</div><h3>Ducting &amp; Piping</h3><p>Fabrication and installation support for industrial ducting and piping systems.</p></article>
+        <article class="card"><div class="ico">▦</div><h3>Structural Fabrication</h3><p>Steel structures, supports, frames and platforms for industrial applications.</p></article>
+        <article class="card"><div class="ico">🔧</div><h3>Maintenance &amp; Erection</h3><p>On-site fabrication, erection and maintenance support based on project scope.</p></article>
+        <article class="card"><div class="ico">✦</div><h3>Custom Metalwork</h3><p>Made-to-requirement fabrication with attention to fit, finish and specifications.</p></article>
+      </div>
+    </div></section>
+    <section id="about"><div class="wrap about-grid">
+      <div class="about-visual"><div class="eyebrow">About IFAB</div><h3>Building dependable industrial solutions.</h3><p>Industrial Fabrication • Engineering • Project Support</p></div>
+      <div class="about-copy"><div class="eyebrow">Who We Are</div><h2>Industrial Fabrication, Made Practical</h2><p>ProSteam IFAB stands for ProSteam Industrial Fabrication. We aim to support industrial clients with fabrication and project work focused on workmanship, clear communication and dependable delivery.</p><p>Contact us to discuss your scope, drawings, site requirements and project timeline. We can update this section with your company history, certifications and actual capabilities.</p><div class="checks"><span>Quality Workmanship</span><span>Project-Focused</span><span>Clear Communication</span><span>Customer Support</span></div></div>
+    </div></section>
+    <section class="projects" id="projects"><div class="wrap"><div class="section-head"><div class="eyebrow">Our Projects</div><h2>Work &amp; Capabilities</h2><p>Replace these sample categories with photographs of your completed work.</p></div>
+      <div class="grid">
+        <article class="card project"><div class="project-img">♨</div><h3>Boiler &amp; Industrial Work</h3><p>Associated fabrication and installation support.</p></article>
+        <article class="card project"><div class="project-img">⇄</div><h3>Ducting Fabrication</h3><p>Industrial ductwork and related components.</p></article>
+        <article class="card project"><div class="project-img">⌁</div><h3>Piping Work</h3><p>Fabrication support for piping requirements.</p></article>
+        <article class="card project"><div class="project-img">▦</div><h3>Steel Structures</h3><p>Frames, supports and custom steelwork.</p></article>
+        </div>
+    </div></section>
+
+    <section id="gallery" class="projects">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">ProSteam Boilers</div>
+          <h2>Our Company &amp; Boiler Photos</h2>
+          <p>Images supplied by ProSteam for company presentation.</p>
+        </div>
+        <div class="grid photo-grid">
+          <article class="card photo-card">
+            <img src="assets/prosteam-industrial-plant-banner.jpg" alt="ProSteam Boilers industrial plant banner" loading="lazy">
+            <h3>ProSteam Boilers — Company Profile</h3>
+          </article>
+          <article class="card photo-card">
+            <img src="assets/prosteam-yellow-boiler.jpg" alt="ProSteam Boilers yellow industrial boiler" loading="lazy">
+            <h3>ProSteam Boilers — Industrial Boiler</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+\n    <section class="contact" id="contact"><div class="wrap contact-grid"><div><div class="eyebrow">Contact IFAB</div><h2>Have an industrial project?</h2><p>Tell us what you need fabricated. Contact us directly to discuss your project and request a quotation.</p><a class="btn" href="https://wa.me/919728524560?text=Hello%20IFAB%2C%20please%20contact%20me%20about%20an%20industrial%20fabrication%20project." target="_blank" rel="noopener">Chat on WhatsApp →</a></div>
+      <div class="contact-box"><h3>Get in touch</h3><p><strong>Company:</strong> ProSteam IFAB — Industrial Fabrication</p><p><strong>Phone:</strong> <a href="tel:+919728524560">97285 24560</a> · <a href="tel:+917091991353">70919 91353</a><br><strong>WhatsApp:</strong> <a href="https://wa.me/919728524560">Chat with ProSteam</a></p><p><strong>Location:</strong> India (add your full business address before publishing)</p><p><strong>Email:</strong> Add your official business email before publishing</p></div>
+    </div></section>
+  </main>
+  <footer><div class="wrap foot"><span>© <span id="year">2026</span> ProSteam IFAB — Industrial Fabrication</span><span>Engineering • Fabrication • Industrial Solutions</span></div></footer>
+</body>
+</html>
